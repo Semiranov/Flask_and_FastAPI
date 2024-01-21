@@ -9,22 +9,3 @@ class ProductIn(BaseModel):
 
 class Product(ProductIn):
     prod_id: int
-
-class OrderIn(BaseModel):
-    user_id: int = Field(..., title='user_id')
-    prod_id: int = Field(..., title='prod_id')
-    date: datetime.date = Field(..., title='date')
-    status: Status = Field(..., title='status')
-
-    class Config:
-        use_enum_values = True
-
-
-class Order(OrderIn):
-    order_id: int
-    firstname: str
-    lastname: str
-    email: EmailStr
-    title: str
-    description: str
-    price: float
