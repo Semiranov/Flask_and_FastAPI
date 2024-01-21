@@ -1,5 +1,4 @@
-# pip install sqlalchemy
-# pip install databases[aiosqlite]
+
 
 import databases
 import sqlalchemy
